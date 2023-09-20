@@ -57,3 +57,21 @@ body{
     margin-top: 60px;
     border-radius: 15px;
 }
+
+.erro{
+    border: 2px solid red !important;
+}
+
+.item-adicionado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-adicionado i{
+    background-color: red;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
