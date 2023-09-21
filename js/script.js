@@ -23,17 +23,52 @@ const addTarefa = () => {
     const p = document.createElement("p");
     p.innerText = inputTxt.value;
 
+    const divBtn = document.createElement("nav");
+    divBtn.classList.add("div-btn");
+
+    const checkTarefa = document.createElement("i");
+    checkTarefa.classList.add("fa-solid");
+    checkTarefa.classList.add("fa-check-double");
+    checkTarefa.classList.add("checkBtn");
+
     const delTarefa = document.createElement("i");
     delTarefa.classList.add("fa-solid");
     delTarefa.classList.add("fa-trash-can");
+    delTarefa.classList.add("deleteBtn");
+
 
     tarefa.appendChild(p);
-    tarefa.appendChild(delTarefa);
+    tarefa.appendChild(divBtn);
+
+    divBtn.appendChild(checkTarefa);
+    divBtn.appendChild(delTarefa);
 
     divTarefas.appendChild(tarefa);
 
     inputTxt.value = "";
+    inputTxt.focus();
 }
+
+document.addEventListener("click", (e) => {
+
+    const trgEl = e.target;
+    const prtEl = trgEl.closest("div");
+
+    if(trgEl.classList.contains("checkBtn")){
+
+        prtEl.classList.toggle("check");
+
+        console.log("Clicou para checar");
+        
+    }
+
+    if(trgEl.classList.contains("deleteBtn")){
+
+        prtEl.remove();
+
+    }
+
+})
 
 const changeText = () => {
     const valida = validaInput();
