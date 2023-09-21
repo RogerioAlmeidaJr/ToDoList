@@ -58,8 +58,6 @@ document.addEventListener("click", (e) => {
 
         prtEl.classList.toggle("check");
 
-        console.log("Clicou para checar");
-        
     }
 
     if(trgEl.classList.contains("deleteBtn")){
