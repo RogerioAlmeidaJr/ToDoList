@@ -47,6 +47,8 @@ const addTarefa = () => {
 
     inputTxt.value = "";
     inputTxt.focus();
+
+    attLS();
 }
 
 document.addEventListener("click", (e) => {
@@ -57,12 +59,14 @@ document.addEventListener("click", (e) => {
     if(trgEl.classList.contains("checkBtn")){
 
         prtEl.classList.toggle("check");
+        attLS();
 
     }
 
     if(trgEl.classList.contains("deleteBtn")){
 
         prtEl.remove();
+        attLS();
 
     }
 
